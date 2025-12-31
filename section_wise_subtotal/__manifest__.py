@@ -3,8 +3,8 @@
 #
 #    Cybrosys Technologies Pvt. Ltd.
 #
-#    Copyright (C) 2023-TODAY Cybrosys Technologies(<https://www.cybrosys.com>).
-#    Author: Mruthul Raj @cybrosys(odoo@cybrosys.com)
+#    Copyright (C) 2024-TODAY Cybrosys Technologies(<https://www.cybrosys.com>).
+#    Author: Cybrosys Techno Solutions(<https://www.cybrosys.com>)
 #
 #    You can modify it under the terms of the GNU AFFERO
 #    GENERAL PUBLIC LICENSE (AGPL v3), Version 3.
@@ -21,7 +21,7 @@
 ###############################################################################
 {
     'name': 'Section Wise Subtotal',
-    "version": "18.0.1.0.0",
+    'version': '18.0.1.0.0',
     'category': 'Sales,Purchases',
     'summary': 'Section wise subtotal in the order line',
     'description': 'This module help you section wise subtotal in order '
@@ -32,8 +32,8 @@
     'website': 'https://www.cybrosys.com',
     'depends': ['sale_management', 'purchase'],
     'data': [
-        # 'report/sale_order_templates.xml',
-        # 'report/purchase_order_templates.xml',
+        'report/sale_order_templates.xml',
+        'report/purchase_order_templates.xml',
     ],
     'assets': {
         'web.assets_backend': [

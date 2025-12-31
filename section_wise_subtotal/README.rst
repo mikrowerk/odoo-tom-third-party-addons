@@ -22,7 +22,9 @@ General Public License, Version 3 (AGPL v3).
 
 Credits
 -------
-Developers: (V17) Mruthul Raj , Contact : odoo@cybrosys.com
+* Developers: (V17) Mruthul Raj ,
+              (V18) Kailas Krishna
+  Contact : odoo@cybrosys.com
 
 Contacts
 --------
