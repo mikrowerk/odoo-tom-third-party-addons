@@ -6,6 +6,10 @@
 #    Copyright (C) 2023-TODAY Cybrosys Technologies(<https://www.cybrosys.com>).
 #    Author: Mruthul Raj @cybrosys(odoo@cybrosys.com)
 #
+#    Fix vor sale-quotation templates, provided by Gammadata
+#    Author Guenther Froestl
+#    Copyright (C) 2025-TODAY Gammadata (<https://www.gammadata.de>)
+#
 #    You can modify it under the terms of the GNU AFFERO
 #    GENERAL PUBLIC LICENSE (AGPL v3), Version 3.
 #
@@ -25,15 +29,15 @@
     'category': 'Sales,Purchases',
     'summary': 'Section wise subtotal in the order line',
     'description': 'This module help you section wise subtotal in order '
-                   'lines of sale and purchase',
-    'author': 'Cybrosys Techno Solutions',
-    'company': 'Cybrosys Techno Solutions',
-    'maintainer': 'Cybrosys Techno Solutions',
-    'website': 'https://www.cybrosys.com',
+                   'lines of sale and purchase'
+                   'with a fix from Gammadata for sale_quotation templates',
+    'author': 'Cybrosys Techno Solutions + Gammadata',
+    'company': 'Cybrosys Techno Solutions + Gammadata',
+    'maintainer': 'Cybrosys Techno Solutions + Gammadata',
+    'website': 'https://www.cybrosys.com, https://www.gammadata.de',
     'depends': ['sale_management', 'purchase'],
     'data': [
-        # 'report/sale_order_templates.xml',
-        # 'report/purchase_order_templates.xml',
+        'views/sale_order_template_views.xml',
     ],
     'assets': {
         'web.assets_backend': [

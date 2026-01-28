@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="sale_order_template_form_section_wise" model="ir.ui.view">
+        <field name="name">sale.order.template.form</field>
+        <field name="model">sale.order.template</field>
+        <field name="inherit_id" ref="sale_management.sale_order_template_view_form"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="replace">
+                <field
+                        name="product_id"
+                        required="not display_type"
+                        force_save="1"
+                        context="{
+                                        'quantity': product_uom_qty,
+                                        'default_description_sale': name
+                                    }"
+                        options="{
+                                        'no_open': True,
+                                    }"
+                        domain="[('sale_ok', '=', True)]"
+                        widget="sol_product_many2one"/>
+            </field>
+            <field name="name" position="replace">
+                <field name="name" widget="section_and_note_text"/>
+            </field>
+            <field name="product_uom_qty" position="replace">
+                <field name="product_uom_qty" invisible="display_type"/>
+            </field>
+            <field name="product_uom_category_id" position="replace">
+                <field name="product_uom_category_id" column_invisible="True"/>
+            </field>
+            <field name="product_uom_id" position="replace">
+                <field
+                        name="product_uom_id"
+                        groups="uom.group_uom"
+                        invisible="display_type"
+                        required="not display_type"/>
+            </field>
+            <field name="product_uom_id" position="after">
+                <field name="price_subtotal" string="Tax excl." column_invisible="True"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
